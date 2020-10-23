@@ -37,7 +37,7 @@ void AdjustMotorPWM( unsigned int iPWM );
 
 boolean RunningMotor();
 
-int _pinEN;
+volatile int _pinEN;
 int _pinIN1;
 int _pinIN2;
 int _iMotorMaxrpm;
