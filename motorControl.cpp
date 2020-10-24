@@ -94,6 +94,9 @@ void Motor::RunMotor(boolean bClockwise, unsigned int iPWM)
 // It returns the speed of the motor (in revolutions per minute), 0 if not running.
 void Motor::AdjustMotorPWM( unsigned int iPWM )
 {
+	if (!_running) {
+		iPWM = 0;
+	}
 	  if (iPWM>255)
   { // Limit requested speed to known motor limit
     iPWM = 255;
