@@ -30,8 +30,11 @@ unsigned long getCoveredCentiRevolutions();
 // Just start motor at the requested PWM value - Stop and speed has to been managed by the main code
 void RunMotor(boolean bClockwise, unsigned int iPWM);  
 
-// Stops the motor
+// Stop the motor 
 void StopMotor();
+
+// break and stop the motor
+void BreakMotor();
 
 void AdjustMotorPWM( unsigned int iPWM );
 

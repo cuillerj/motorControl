@@ -188,3 +188,14 @@ void Motor::StopMotor()
 	_running=false;
 	// Serial.println("Motor stopped");
 }
+void Motor::BreakMotor()
+{
+	digitalWrite(_pinEN, HIGH);
+	digitalWrite(_pinIN1, HIGH);
+	digitalWrite(_pinIN2, HIGH);
+	_irpm = 0;
+	_startTime = 0;
+	_expectedCentiRevolutions = 0;
+	_running = false;
+	// Serial.println("Motor stopped");
+}
